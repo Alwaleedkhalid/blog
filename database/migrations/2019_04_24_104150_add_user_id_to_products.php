@@ -14,7 +14,7 @@ class AddUserIdToProducts extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            //
+            $table->bigIncrements('user_id');
         });
     }
 
