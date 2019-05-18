@@ -59,7 +59,7 @@ class PageContoller extends Controller
     {
         $product = new Product;
         $data_from_form = $request->all();
-        $product->user_id = auth()->user()->id;
+        // $product->user_id = auth()->user()->id;
         $product->save();
         Product::create($data_from_form);
         return redirect('insert_product');
