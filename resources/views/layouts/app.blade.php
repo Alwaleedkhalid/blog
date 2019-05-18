@@ -18,14 +18,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <style>
+        <style>
             section{
                 text-align: center;
              }
              footer{
                 text-align: center;
              }
-            </style>
+        </style>
 </head>
     <body>
     {{-- <div id="app"> --}}

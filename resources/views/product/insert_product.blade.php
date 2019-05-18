@@ -32,16 +32,19 @@
         @endif --}}
 
             <form role="form" method="post" action="{{action('PageContoller@store')}}">
-                {{-- /*this's function use it for security*/ --}}
+                    {{-- /*this's function use it for security*/ --}}
                     @csrf   
+
                        <div class="form-group">
                          <label for="exampleInputEmail1">PRODUCT</label>
                          <input name="name" type="text" class="form-control" required>
                        </div>
+
                        <div class="form-group">
                          <label for="exampleInputPassword1">PRICES</label>
                          <input name="price" type="number" class="form-control" required>
                        </div>
+    
                        <button href="/insert_product" type="submit" class="btn btn-primary">Submit</button>
              </form>    
 
@@ -74,7 +77,7 @@
             <a href="/insert_product" class="btn btn-secondary">Add New Proudct</a>
             <a href="/" class="btn btn-light">Go Back</a>
         @else
-            <p>no product !</p>
+            <h1>no product !</h1>
         @endif
         
     @endsection

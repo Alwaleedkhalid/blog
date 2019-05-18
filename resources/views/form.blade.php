@@ -61,7 +61,7 @@
           @endforeach 
 
           @else
-          <p> No Forms !</p>
+          <h1> No Forms !</h1>
       @endif
         </div>
         {{-- <div class="col">
