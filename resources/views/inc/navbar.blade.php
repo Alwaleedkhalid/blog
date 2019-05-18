@@ -26,7 +26,7 @@
                       <a class="nav-link" href="/services">Services</a>
                 </li>
               <li class="nav-item">
-                <a class="nav-link" href="/insert_product">Insert</a>
+                <a class="nav-link" href="/insert_product">Products</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/form">Forms</a>
