@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
     @section('content')
-        <h1>Forms - Proudect</h1>  
+        <h1 class="">Forms - Proudect</h1>  
          <hr>
 
          {{-- ** this form for insert diffrent table from DB at index tamblete ** --}}
