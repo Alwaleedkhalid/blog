@@ -7,9 +7,9 @@
     {{-- at form elemnt .. if you need to Edit  should be use method = "update"   name="csrf-token" content="{{ csrf_token() }}"--}}
         <form role="form" method="post" action="{{action('FormController@update', $id)}}">  
             @method('PUT')
+            @csrf
             <div>
                 {{-- /*this's function use it for security*/ --}}
-                @csrf
                 {{-- @if ()   --}}
                   <label for="exampleInputEmail1">Update Frist Name</label>
                   <input name="fn" type="text" placeholder="change it ( {{$form->fn}} ) to "  class="form-control" required>

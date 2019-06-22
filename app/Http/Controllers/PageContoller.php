@@ -69,8 +69,6 @@ class PageContoller extends Controller
          $product = Product::orderby('id','desc')->paginate(1);
          $form = Form::orderby('id','desc')->paginate(1);
          return view ('form_product', compact('form','product'));
-
-
     }
 
 

@@ -53,6 +53,7 @@ class FormController extends Controller
     {
         $data_from_form = $request->all();
         // dd($data_from_form);
+        // dd($data_from_form);
         Form::create($data_from_form);
         // Product::create($data_from_form);
         return redirect('form');
