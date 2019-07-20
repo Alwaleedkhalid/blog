@@ -68,7 +68,24 @@ class PageContoller extends Controller
     {
          $product = Product::orderby('id','desc')->paginate(1);
          $form = Form::orderby('id','desc')->paginate(1);
+        //  dd($form);
          return view ('form_product', compact('form','product'));
+    }
+
+    public function search()
+    {
+        //  $product = Product::all();
+        //  $search = $product->search();
+
+        // // $collection = collect([2, 4, 6, 8]);
+
+        // $collection->search(8);
+        
+        // dd($collection);
+        
+
+
+        //  return view ('form_product', compact('search'));
     }
 
 

@@ -30,7 +30,6 @@
                     @endfor
             </table>
         @endif --}}
-
             <form role="form" method="post" action="{{action('PageContoller@store')}}">
                     {{-- /*this's function use it for security*/ --}}
                     @csrf   
@@ -80,5 +79,9 @@
             <h1>no product !</h1>
         @endif
         
+        {{-- <form action="{{action('PageContoller@search')}}">
+            
+
+        </form> --}}
     @endsection
         

@@ -106,6 +106,8 @@
         <p>
             {{$products}}
         @endforeach --}}
+
+        
         @endsection
 
 
