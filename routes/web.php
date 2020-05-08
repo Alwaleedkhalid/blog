@@ -44,3 +44,5 @@ Route::resource('form', 'FormController');
 Auth::routes();
 
 Route::get('/dashboard', 'dashboardController@index');
+
+
