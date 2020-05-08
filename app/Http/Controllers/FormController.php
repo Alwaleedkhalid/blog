@@ -36,7 +36,7 @@ class FormController extends Controller
         // $products = Product::all();
         // return view('create', compact('forms'));
         // $product =  Product::find($id);
-        // $form =  Form::all();
+        $form =  Form::all();
         // return view ('show', compact('form'));
         return view ('create', compact('form'));
         // dd('form');
