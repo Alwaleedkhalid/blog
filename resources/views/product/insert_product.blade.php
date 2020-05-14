@@ -60,9 +60,7 @@
                         <th scope="col">PRICES</th>
                       </tr>
                     </thead>
-                        <div>
-                            <p>ffff</p>
-                        </div>
+                       
                     <tbody>
                             <tr>
                                 <th scope="row">{{$product->id}}</th>
