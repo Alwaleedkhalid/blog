@@ -35,7 +35,7 @@ Route::get('/services','PageContoller@services');
 Route::get('/insert_product','PageContoller@insert_product');
 Route::post('/store','PageContoller@store');
 Route::get('/show','PageContoller@show');
-Route::get('/form_product','PageContoller@index_F_P');
+Route::get('/form_product','PageContoller@index_F_P')->middleware('auth');
 // Route::get('/form_product','PageContoller@search');
 Route::resource('form', 'FormController');
 // Route::resource('/create', 'FormController@index')->name('create');
