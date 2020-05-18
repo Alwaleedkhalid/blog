@@ -17,11 +17,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-use App\User;
-use App\Http\Resources\User as UserResource;
 
-Route::get('/user', function () {
-    return UserResource::collection(User::all());
+Route::apiresource('/Products', 'ProductController');
+
+Route::group(['prefix' => 'products'], function () {
+
+    Route::apiresource('/{product}/Reviews/' , 'ReviewController');
+
 });
-;
-
