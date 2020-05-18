@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::apiresource('/Products', 'ProductController');
+Route::apiresource('/products', 'ProductController');
 
 Route::group(['prefix' => 'products'], function () {
 
