@@ -107,8 +107,11 @@ class ProductController extends Controller
      * @param  App\Product $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy($product)
+    public function destroy(Product $product)
     {
-        return $product;
+         $product->Delete();
+
+         return response(null, Response::HTTP_NO_CONTENT);
+        
     }
 }
