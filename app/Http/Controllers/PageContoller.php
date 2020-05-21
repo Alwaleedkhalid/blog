@@ -3,6 +3,8 @@ namespace App\Http\Controllers;
 use App\Product;
 use Illuminate\Http\Request;
 use App\Form;
+use App\User;
+use App\Auth;
 // use DB;
 
 class PageContoller extends Controller
@@ -48,6 +50,7 @@ class PageContoller extends Controller
 
         // [dd()] use it for check DB ... 
         // dd();
+            
 
         // $products = Product::all();
 
@@ -57,9 +60,10 @@ class PageContoller extends Controller
     }
     public function store(Request $request)
     {
+
         $product = new Product;
-        $data_from_form = $request->all();
         // $product->user_id = auth()->user()->id;
+        $data_from_form = $request->all();
         // $product->save();
         Product::create($data_from_form);
         return redirect('insert_product');

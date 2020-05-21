@@ -30,7 +30,7 @@
                     @endfor
             </table>
         @endif --}}
-            <form role="form" method="post" action="{{action('PageContoller@store')}}">
+            <form role="form" method="post" action="{{action('PageContoller@store' , ['user_id' => Auth::user()->id])}}">
                     {{-- /*this's function use it for security*/ --}}
                     @csrf   
 
@@ -43,8 +43,21 @@
                          <label for="exampleInputPassword1">PRICES</label>
                          <input name="price" type="number" class="form-control" required>
                        </div>
+
+                       <div class="form-group">
+                         <label for="exampleInputPassword1">detial</label>
+                         <input name="detial" type="text" class="form-control" required>
+                       </div>
+                       <div class="form-group">
+                         <label for="exampleInputPassword1">stock</label>
+                         <input name="stock" type="number" class="form-control" required>
+                       </div>
+                       <div class="form-group">
+                         <label for="exampleInputPassword1">discount</label>
+                         <input name="discount" type="number" class="form-control" required>
+                       </div>
     
-                       <button href="/insert_product" type="submit" class="btn btn-primary">Submit</button>
+                       <button href="" type="submit" class="btn btn-primary">Submit</button>
              </form>    
 
             <hr>
@@ -58,6 +71,9 @@
                         <th scope="col">#</th>
                         <th scope="col">PRODUCTS</th>
                         <th scope="col">PRICES</th>
+                        <th scope="col">detial</th>
+                        <th scope="col">stock</th>
+                        <th scope="col">discount</th>
                       </tr>
                     </thead>
                        
@@ -66,6 +82,9 @@
                                 <th scope="row">{{$product->id}}</th>
                                 <td>{{$product->name}}</td>   
                                 <td>{{$product->price}}</td>   
+                                <td>{{$product->detial}}</td>   
+                                <td>{{$product->stock}}</td>   
+                                <td>{{$product->discount}}</td>   
                             </tr>                                                                   
                     </tbody>
 

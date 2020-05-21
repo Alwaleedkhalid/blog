@@ -43,6 +43,11 @@ class User extends Authenticatable
             
             return $this->hasMany('App\Form');
         }
+
+        public function product(){
+ 
+            return $this->hasMany('App\product' ,'id');
+        }
     }
 
 
