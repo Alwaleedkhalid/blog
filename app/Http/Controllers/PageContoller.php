@@ -62,7 +62,7 @@ class PageContoller extends Controller
     {
 
         $product = new Product;
-        // $product->user_id = auth()->user()->id;
+        $product->user_id = auth()->user()->id;
         $data_from_form = $request->all();
         // $product->save();
         Product::create($data_from_form);

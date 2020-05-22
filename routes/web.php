@@ -32,12 +32,12 @@ route::get('/users/{id}/{name}', function($id,$name){
 Route::get('/','PageContoller@index');
 Route::get('/about','PageContoller@about');
 Route::get('/services','PageContoller@services');
-Route::get('/insert_product','PageContoller@insert_product');
+Route::get('/insert_product','PageContoller@insert_product')->middleware('auth');
 Route::post('/store','PageContoller@store');
 Route::get('/show','PageContoller@show');
 Route::get('/form_product','PageContoller@index_F_P')->middleware('auth');
 // Route::get('/form_product','PageContoller@search');
-Route::resource('form', 'FormController');
+Route::resource('form', 'FormController')->middleware('auth');
 // Route::resource('/create', 'FormController@index')->name('create');
 
 
