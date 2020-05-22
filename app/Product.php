@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Review;
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class product extends Model
@@ -20,7 +21,7 @@ class product extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\user' , 'user_id');
+        return $this->belongsTo(User::class);
     }
         
 }

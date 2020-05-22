@@ -8,8 +8,8 @@ use App\Http\Resources\Product\ProductCollection;
 use App\Http\Resources\Product\ProductResource;
 use Symfony\Component\HttpFoundation\Response;
 use App\Product;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use Auth; 
 
 class ProductController extends Controller
 {
@@ -46,8 +46,10 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
+        
         $product = new Product;
-
+        
+        // $product->user_id = auth()->user()->id;
         $product->name = $request->name;
         $product->detial = $request->description;
         $product->stock = $request->stock;
@@ -92,7 +94,7 @@ class ProductController extends Controller
      * @param  App\Product $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,Product $product)
+    public function update(Request $request, Product $product)
     {
         $this->ProductUserCheck($product);
 
@@ -130,7 +132,7 @@ class ProductController extends Controller
      */
     public function ProductUserCheck(Product $product)
     {
-        if (Auth::id() != $product->user_id)
+        if (Auth::user() !== $product->user_id)
         {
             throw new ProductNotBelongsToUser;
         }
