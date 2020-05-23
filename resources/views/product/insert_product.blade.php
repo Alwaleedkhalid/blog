@@ -30,7 +30,7 @@
                     @endfor
             </table>
         @endif --}}
-            <form role="form" method="post" action="{{action('PageContoller@store')}}">
+            <form role="form" method="post" action="{{action('PageContoller@store' ,['user_id' => Auth::user()->id])}}">
                     {{-- /*this's function use it for security*/ --}}
                     @csrf   
 
