@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Auth;
 
 class ProductRequest extends FormRequest
 {
@@ -24,6 +25,7 @@ class ProductRequest extends FormRequest
     public function rules()
     {
         return [
+            'user_id' => 'required',
             'name' => 'required|max:255|unique:products',
             'description' => 'required',
             'price' => 'required|max:10',

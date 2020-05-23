@@ -49,7 +49,7 @@ class ProductController extends Controller
         
         $product = new Product;
         
-        // $product->user_id = auth()->user()->id;
+        $product->user_id = auth()->user()->id;
         $product->name = $request->name;
         $product->detial = $request->description;
         $product->stock = $request->stock;
