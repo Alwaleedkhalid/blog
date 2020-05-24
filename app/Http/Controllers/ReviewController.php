@@ -70,7 +70,7 @@ class ReviewController extends Controller
      */
     public function edit(Review $review)
     {
-        //
+        // 
     }
 
     /**
@@ -80,9 +80,9 @@ class ReviewController extends Controller
      * @param  \App\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Review $review)
+    public function update(Request $request, Product $product, Review $review)
     {
-        //
+        return $review;
     }
 
     /**
