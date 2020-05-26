@@ -36,5 +36,24 @@
         <h5 class="card-title">Secondary card title</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div> --}}
+
+    <div id="map" style="position:absolute;overflow:hidden;width:500px;height:600px; margin:0px; padding:0px; background-color:white;">
         
+    </div>
+
+        
+    <script>
+        function myInitializeAPI() {
+        var mapDiv = 'map'; //id of the div where the map should appear
+        var mapType = '21'; //default or 10=SPMaps; 21=Google; 31=Bing; 12=Traffic
+        var mapLanguage = 'A';
+        var proxyUrl = 'http://127.0.0.1:8000/';
+        var apiClientKey = 'AIzaSyBbWp-8j6qCmUMdbT0-k3fe-NlFIsgMPK0';
+        SANGC_LoadMapViewer(mapDiv, mapType, mapLanguage, proxyUrl, apiClientKey);
+        };
+    </script>
+
     @endsection
+
+
+    
