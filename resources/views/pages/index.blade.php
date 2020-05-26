@@ -47,8 +47,8 @@
         var mapDiv = 'map'; //id of the div where the map should appear
         var mapType = '21'; //default or 10=SPMaps; 21=Google; 31=Bing; 12=Traffic
         var mapLanguage = 'A';
-        var proxyUrl = 'http://127.0.0.1:8000/';
-        var apiClientKey = 'AIzaSyBbWp-8j6qCmUMdbT0-k3fe-NlFIsgMPK0';
+        var proxyUrl = '';
+        var apiClientKey = '';
         SANGC_LoadMapViewer(mapDiv, mapType, mapLanguage, proxyUrl, apiClientKey);
         };
     </script>
